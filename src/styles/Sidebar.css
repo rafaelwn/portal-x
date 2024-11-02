@@ -1,0 +1,83 @@
+.sidebar {
+    width: 250px;
+    background-color: #2e2e3b;
+    padding: 20px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+  
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    height: 35px; 
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 15px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  li:hover {
+    color: #00bcd4;
+  }
+
+.sidebar ul li {
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de hover com background deslizante */
+.sidebar ul li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 188, 212, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.sidebar ul li:hover::before {
+  left: 100%;
+}
+
+/* Efeito de hover com transformação */
+.sidebar ul li:hover {
+  color: #00bcd4;
+  transform: translateX(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Efeito de clique */
+.sidebar ul li:active {
+  transform: scale(0.95);
+}
+
+/* Estilo para item ativo */
+.sidebar ul li.active {
+  background-color: rgba(0, 188, 212, 0.2);
+  color: #00bcd4;
+  font-weight: bold;
+}

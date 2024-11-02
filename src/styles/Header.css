@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e2e3b;
+    padding: 10px 20px;
+    border-bottom: 1px solid #444;
+    position: fixed;
+    width: calc(100% - 310px);
+    left: 290px;
+    top: 0;
+    transition: left 0.3s ease, width 0.3s ease;
+    z-index: 15;
+    height: 100px; /* Reduzido de 80px ou valor anterior */
+    padding: 0 0.8rem;
+  }
+  
+  .app.sidebar-hidden .header {
+    left: 0px;
+    width: 99%;
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .user-menu {
+    display: flex;
+    gap: 50px;
+    font-size: 1em;
+    color: #ffffff;
+    left: 20px;
+    margin-right: 50px; /* Adicionando margem direita de 20px */
+  }
