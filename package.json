@@ -1,4 +1,7 @@
 {
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
   "name": "coreui-dashboard",
   "version": "0.1.0",
   "private": true,
